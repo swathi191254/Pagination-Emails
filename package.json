@@ -1,0 +1,24 @@
+{
+  "name": "pagination-emails",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon pagination"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/swathi191254/Pagination-Emails.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/swathi191254/Pagination-Emails/issues"
+  },
+  "homepage": "https://github.com/swathi191254/Pagination-Emails#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^6.0.14"
+  }
+}
