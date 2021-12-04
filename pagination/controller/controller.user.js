@@ -20,7 +20,24 @@ router.post("/",async (req, res) => {
     }
 });
 
+router.get("/",async(req, res)=>{
+    try{
+        const page = +req.query.page || 1;
+        const size = req.query.size || 2;
 
+        const skip = (page-1)*size;
+
+        const totalPages = Math.ceil((await User.find().countDocuments())/size);
+
+        const users = await User.find().skip(skip).limit(size).lean().exec();
+
+        return res.json({users,totalPages});
+    }
+        catch(err){
+            return res.status(404).json({status:"failed"})
+        }
+  
+})
 
 
 
